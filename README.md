@@ -20,3 +20,5 @@ java -jar vinci-1.0.jar
 ## 4.地址
 
 [http://www.dubby.cn/grapheditor/index.html](http://www.dubby.cn/grapheditor/index.html)
+
+![](http://www.dubby.cn/upload/2017-12-20/91d99b00-5f79-4286-ba82-de743af80f2d.png)
