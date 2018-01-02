@@ -32,6 +32,6 @@ public class Constants
 	/**
 	 * Maximum area for exports. Default is 10000x10000px.
 	 */
-	public static final int MAX_AREA = 10000 * 10000;
+	public static final int MAX_AREA = 100000 * 100000;
 
 }

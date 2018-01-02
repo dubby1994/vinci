@@ -158,6 +158,8 @@ public class GraphEditorExportService {
         if (image != null)
         {
             Graphics2D g2 = image.createGraphics();
+            Font font = new Font("宋体", Font.BOLD, 12);
+            g2.setFont(font);
             mxUtils.setAntiAlias(g2, true, true);
             renderXml(xml, createCanvas(url, g2));
 
