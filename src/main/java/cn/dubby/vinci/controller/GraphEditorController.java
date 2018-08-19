@@ -33,12 +33,12 @@ public class GraphEditorController {
         graphEditorOpenService.open(request, response);
     }
 
-    @RequestMapping(value = "save", method = RequestMethod.POST)
+    @RequestMapping(value = "save")
     public void save(HttpServletRequest request, HttpServletResponse response) throws IOException {
         graphEditorSaveService.save(request, response);
     }
 
-    @RequestMapping(value = "export", method = RequestMethod.POST)
+    @RequestMapping(value = "export")
     public void export(HttpServletRequest request, HttpServletResponse response) throws IOException {
         graphEditorExportService.export(request, response);
     }
