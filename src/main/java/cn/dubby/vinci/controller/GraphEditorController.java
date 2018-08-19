@@ -16,7 +16,7 @@ import java.io.*;
  * Created by teeyoung on 17/12/20.
  */
 @Controller
-@RequestMapping(value = "grapheditor")
+//@RequestMapping(value = "grapheditor")
 public class GraphEditorController {
 
     @Autowired

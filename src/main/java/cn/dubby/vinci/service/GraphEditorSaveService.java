@@ -16,33 +16,27 @@ import java.net.URLDecoder;
 public class GraphEditorSaveService {
 
     public void save(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        if (request.getContentLength() < Constants.MAX_REQUEST_SIZE)
-        {
+        if (request.getContentLength() < Constants.MAX_REQUEST_SIZE) {
             String filename = request.getParameter("filename");
             String xml = request.getParameter("xml");
 
-            if (filename == null)
-            {
+            if (filename == null) {
                 filename = "export";
             }
 
-            if (xml != null && xml.length() > 0)
-            {
+            if (xml != null && xml.length() > 0) {
                 String format = request.getParameter("format");
 
-                if (format == null)
-                {
+                if (format == null) {
                     format = "xml";
                 }
 
-                if (!filename.toLowerCase().endsWith("." + format))
-                {
+                if (!filename.toLowerCase().endsWith("." + format)) {
                     filename += "." + format;
                 }
 
                 // Decoding is optional (no plain text values allowed)
-                if (xml != null && xml.startsWith("%3C"))
-                {
+                if (xml != null && xml.startsWith("%3C")) {
                     xml = URLDecoder.decode(xml, "UTF-8");
                 }
 
@@ -56,18 +50,13 @@ public class GraphEditorSaveService {
                 out.write(xml.getBytes("UTF-8"));
                 out.flush();
                 out.close();
-            }
-            else
-            {
+            } else {
                 response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
             }
-        }
-        else
-        {
+        } else {
             response.setStatus(HttpServletResponse.SC_REQUEST_ENTITY_TOO_LARGE);
         }
     }
-
 
 
 }
