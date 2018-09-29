@@ -340,7 +340,7 @@ var AboutDialog = function(editorUi)
 	img.style.border = '0px';
 	img.setAttribute('width', '176');
 	img.setAttribute('width', '151');
-	img.setAttribute('src', '/ITBus.jpg');
+	img.setAttribute('src', 'https://www.dubby.cn/upload/1504774761775ITBus.jpg');
 	div.appendChild(img);
 	mxUtils.br(div);
 	mxUtils.write(div, 'Powered by Dubby');
